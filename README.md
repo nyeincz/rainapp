@@ -4,7 +4,7 @@ Rain Fall App , will generate rainfall data of a particular location in Singapor
 # Install and Run Project
 
 $git clone gitURL
-$cd application
+$cd rainapp
 $pip install -r requirements.txt
 $python run.py
 

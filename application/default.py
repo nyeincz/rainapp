@@ -44,7 +44,7 @@ def getStation(data):
 def getRaindata(stationID, data):
   # Find raindata for specific station ID
     readings = data['items'][0]['readings']
-    timeStamp = data['items'][0]['timestamp']
+    timeStamp = data['items'][0]['timestamp'].split('T')[1].split('+')[0]
 
     # print(readings)
     for reading in readings:

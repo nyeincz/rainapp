@@ -9,3 +9,9 @@ $pip install -r requirements.txt
 $python run.py
 
 You can see the result by localhost:8080 on your local browser.
+
+
+# How to run the tests?
+
+$cd pytest
+$pytest configtest.py

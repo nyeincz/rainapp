@@ -15,3 +15,12 @@ You can see the result by localhost:8080 on your local browser.
 
 $cd pytest
 $pytest configtest.py
+
+
+# How to run Dockerize the application?
+
+Build docker image
+Run fullowling command in directory Dockerfile exist.
+
+$docker build -t rainapp:v1 .
+

@@ -1,5 +1,7 @@
 # import main Flask class and request object
 from cgitb import reset
+from logging import exception
+from tkinter import E
 import requests
 import json
 import os
@@ -20,12 +22,16 @@ bp = Blueprint('default', __name__, url_prefix='/')
 # default route
 @bp.route('/')
 def detectRaining():
-    data = getData()
-    stationID = getStation(data)
-    finalResult = getRaindata(stationID, data)
-    print(f"{date.today()} App able access API {rainUrl}")
-    return finalResult
-    # return 'Query String Example'
+   try: 
+      data = getData()
+      stationID = getStation(data)
+      finalResult = getRaindata(stationID, data)
+      print(f"{date.today()} App able access API {rainUrl}")
+      return finalResult
+       # return 'Query String Example'
+   except Exception as e:
+      print (e)
+      print (f"App cannot access API")
 
 
 def getData():

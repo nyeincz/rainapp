@@ -3,6 +3,7 @@ from cgitb import reset
 import requests
 import json
 import os
+from datetime import date
 import functools
 from flask import (
     Blueprint
@@ -22,6 +23,7 @@ def detectRaining():
     data = getData()
     stationID = getStation(data)
     finalResult = getRaindata(stationID, data)
+    print(f"{date.today()} App able access API {rainUrl}")
     return finalResult
     # return 'Query String Example'
 

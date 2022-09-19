@@ -1,0 +1,6 @@
+# ignore git readme folder
+.git
+README.md
+dev
+rainapp-k8s-yaml
+tests
